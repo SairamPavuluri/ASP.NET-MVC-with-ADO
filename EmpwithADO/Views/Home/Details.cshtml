@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>@model EmpwithADO.Models.Employee
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h2 class="text-md-center"> Employee Details are</h2>
+        <table class="container border-2 ">
+            <tbody>
+                <tr>
+                    <td>Employee Id is = @Model.EmpId</td>
+                </tr>
+                <tr>
+                    <td>Employee Name is = @Model.EmpName</td>
+                </tr>
+                <tr>
+                    <td>Employee Salary is = @Model.Salary</td>
+                </tr>
+                <tr>
+                    <td>Employee DeptId is = @Model.DepID</td>
+                </tr>
+                <tr>
+                    <td>Employee City is = @Model.City</td>
+                </tr>
+                <tr>
+                    <td>Employee Email is = @Model.Email</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <a href="/Home/GetEmployee">Back to table</a>
+       
+
+    </div>
+</body>
+</html>

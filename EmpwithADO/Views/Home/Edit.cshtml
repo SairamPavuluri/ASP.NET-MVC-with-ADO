@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>@model EmpwithADO.Models.Employee
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <form action="" method="Post">
+            <div class="form-group">
+                <label for="EId">Enter Employee Number</label>
+                <br />
+                <input type="text" class="form-control" id="EmpId" placeholder="Enter Eno" readonly name="EmpId" value="@Model.EmpId">
+            </div>
+            <div class="form-group">
+                <label for="EmpName">Enter Employee Name</label>
+                <br />
+                <input type="text" class="form-control" id="EmpName" placeholder="Enter EmpName" name="EmpName" value="@Model.EmpName">
+            </div>
+            <div class="form-group">
+                <label for="EmpDeptId">Enter Employee DeptID</label>
+                <br />
+                <input type="text" class="form-control" id="EmpDeptId" placeholder="Enter DeptID" name="DepID" value="@Model.DepID">
+            </div>
+            <div class="form-group">
+                <label for="Salary">Enter Employee Salary</label>
+                <br />
+                <input type="text" class="form-control" id="Salary" placeholder="Enter Salary" name="Salary" value="@Model.Salary">
+            </div>
+            <div class="form-group">
+                <label for="Email">Enter Employee Email</label>
+                <br />
+                <input type="email" class="form-control" id="Email" placeholder="Enter email" name="Email" value="@Model.Email">
+            </div>
+            <div class="form-group">
+                <label for="City">Enter Employee City</label>
+                <br />
+                <input type="text" class="form-control" id="City" placeholder="Enter City" name="City" value="@Model.City">
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+        <br />
+            <div>
+                <a href="/Home/GetEmployee" class="btn btn-primary">Back to Home</a>
+            </div>
+    </div>
+</body>
+</html>

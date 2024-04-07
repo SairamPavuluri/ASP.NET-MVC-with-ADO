@@ -1,0 +1,50 @@
+﻿@model List<EmpwithADO.Models.Employee>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetEmployee</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container"> 
+        <h1 class="text-center">Existing Employee Details Using ASP.NET MVC</h1>
+        <hr />
+        <a href="Home/Create" class="btn btn-primary btn-sm">Create a New Employee</a>
+        <br />
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Employee No </th>
+                    <th>Employee Name </th>
+                    <th>Employee DepID </th>
+                    <th>Employee Salary </th>
+                    <th>Employee Email </th>
+                    <th>Employee City </th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ 
+                    foreach (var item in Model)
+                    {
+                                <tr>
+                                    <td> @item.EmpId</td>
+                                    <td> @item.EmpName</td>
+                                    <td> @item.DepID</td>
+                                    <td> @item.Salary</td>
+                                    <td> @item.Email</td>
+                                    <td> @item.City</td>
+                                    <td><a href="/Home/Edit/@item.EmpId" class="btn btn-info btn-primary">Edit</a></td>
+                                    <td><a href="/Home/Details/@item.EmpId" class="btn btn-primary">Details</a></td>
+                                    <td><a href="/Home/Delete/@item.EmpId" class="btn btn-warning btn-primary">Delete</a></td>
+
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
